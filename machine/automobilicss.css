@@ -1,0 +1,29 @@
+body{
+    background-image: url("fiat502.jpg");
+    background-size: "contain";
+    text-align: center;
+}
+h1{
+    color: black;
+    font-size: 69px;
+}
+button{
+    width: 120px;
+    height: 25px;
+    color: rgb(0, 0, 0);
+    resize: inherit;
+}
+p{
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+}
+.container{
+    border: 10px;
+    border-radius: 14px;
+    border-color: black;
+    background-color: white;
+    width: 70%;
+    height: 600px;
+    margin-left: 15%;
+}
+ 

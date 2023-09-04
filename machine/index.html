@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cercatore di automibili FIAT</title>
+    <link rel="stylesheet" href="./automobilicss.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Cercatore di automobili FIAT</h1>
+    <label for="placaInput">Scrivi la targa:</label>
+    <input type="text" id="placaInput" placeholder="Ex.: IT.123.AB">
+    <button onclick="consultarPlaca()">Cercare</button>
+    <p id="resultado"></p>
+
+    <script>
+        function consultarPlaca() {
+            const placaInput = document.getElementById("placaInput").value.toUpperCase();
+            const automoveis = [
+            {
+        "placa": "IT-123-UN",
+        "marca": "FIAT",
+        "modelo": "Uno",
+        "ano": 1997
+    },
+    {
+        "placa": "IT-332-BR",
+        "marca": "FIAT",
+        "modelo": "Bravo",
+        "ano": 2007
+    },
+    {
+        "placa": "IT-324-RE",
+        "marca": "FIAT",
+        "modelo": "Regata",
+        "ano": 1984
+    },
+    {
+        "placa": "IT-764-ZE",
+        "marca": "FIAT",
+        "modelo": "Zero",
+        "ano": 1913
+    },
+    {
+        "placa": "IT-598-VI",
+        "marca": "FIAT",
+        "modelo": "Viaggio",
+        "ano": 2018
+    },
+    {
+        "placa": "IT-789-TB",
+        "marca": "FIAT",
+        "modelo": "Topolino Barchetta",
+        "ano": 1948
+    },
+    {
+        "placa": "IT-276-AR",
+        "marca": "FIAT",
+        "modelo": "Argento",
+        "ano": 1984
+    },
+    {
+        "placa": "IT-250-TG",
+        "marca": "FIAT",
+        "modelo": "Ardita 2500",
+        "ano": 1935
+    },
+    {
+        "placa": "IT-453-MA",
+        "marca": "FIAT",
+        "modelo": "Marea",
+        "ano": 2003
+    },
+    {
+        "placa": "IT-459-YT",
+        "marca": "FIAT",
+        "modelo": "Marengo",
+        "ano": 1995
+    }
+        ]
+            const automovel = automoveis.find(auto => auto.placa === placaInput);
+
+            if (automovel) {
+                const messaggio = `Placa: ${automovel.placa} <br> \nMarca: ${automovel.marca} <br> \nModelo: ${automovel.modelo} <br> \nAno: ${automovel.ano}`;
+                document.getElementById("resultado").innerHTML = messaggio
+            } else {
+                alert("Placa não encontrada.");
+            }
+        }
+    </script>
+    </div>
+</body>
+</html>
